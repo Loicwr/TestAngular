@@ -9,6 +9,6 @@ import { Component } from '@angular/core';
 export class DemoBindingComponent {
   message = 'Bonjour je suis Angular !';
   imageUrl = 'https://www.grapheine.com/wp-content/uploads/2015/09/nouveau-logo-google-2015.jpg';
-  imageLocal = 
+  imageLocal = 'assets/img/test.jpeg';
 }
 
