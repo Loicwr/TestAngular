@@ -9,6 +9,6 @@ import { Component } from '@angular/core';
 })
 export class DirectivesStructurellesComponent {
   isLoggedIn = true;
-  
+  isAdmin = false;
 
 }

@@ -1,5 +1,21 @@
 <h1>Directive Structurelles</h1>
 
 <h2>*ngIf</h2>
+<h4>Afficher un bloc HTML seulement si une condition est vraie.</h4>
+
 <p *ngIf="isLoggedIn">Bienvenue, vous êtes connecté !</p>
 
+<h5>Si " isLoggedIn " = false,  alors balise p ne s'affiche pas</h5>
+
+
+<h2>*ngIf ... else - Affichage conditionnel avec fallback</h2>
+<h4>Afficher un contenu alternatif si la condition est fausse.</h4>
+
+<p *ngIf="isAdmin; else accessDenied">Bienvenu Admin</p>
+<ng-template #accessDenied>
+    <p>Accès refusé.</p>
+</ng-template>
+
+<h5>Si " isAdmin " = false,  il affiche le contenu de ng-template</h5>
+
+<h2></h2>
