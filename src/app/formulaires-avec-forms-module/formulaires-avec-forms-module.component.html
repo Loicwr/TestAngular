@@ -35,3 +35,24 @@
 <input type="text" [(ngModel)]="prenom" name="prenom" required minlength="3" />
 
 <h4> Angular reconnaît les validations HTML (required, minlength, pattern, etc.) et agit automatiquement.</h4>
+
+---------------------------------------------------------------------
+
+<h2>5. Afficher les erreurs de validation avec *ngIf</h2>
+<p>Pour informer l'utilisateur quand il fait une erreur (champ vide, trop court…).</p>
+
+<form #f="ngForm" (ngSubmit)="onSubmit()">
+    <input type="text" [(ngModel)]="prenom" name="prenom" required minlength="3" #prenomInput="ngModel" />
+
+    <div *ngIf="prenomInput.invalid && prenomInput.touched">
+        <small *ngIf="prenomInput.errors?.['required']">Le prénom est requis.</small>
+        <small *ngIf="prenomInput.errors?.['minlength']">Minimun 3 caratères.</small>
+    </div>
+
+    <button type="submit" [disabled]="f.invalid">Envoyer</button>
+</form>
+
+<h4>.invalid = champ incorrect, .touched = l'utilisateur a cliqué dans le champ au moins une fois.</h4>
+
+---------------------------------------------------------------------
+
