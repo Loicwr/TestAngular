@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './directives-structurelles.component.scss'
 })
 export class DirectivesStructurellesComponent {
+  isLoggedIn = true;
+  
 
 }
