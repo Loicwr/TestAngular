@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -8,5 +9,5 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './formulaires-avec-forms-module.component.scss'
 })
 export class FormulairesAvecFormsModuleComponent {
-  
+  prenom = '';
 }
