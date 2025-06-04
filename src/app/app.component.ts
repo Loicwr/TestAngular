@@ -4,10 +4,12 @@ import { DemoBindingComponent } from "./demo-binding/demo-binding.component";
 import { DirectivesStructurellesComponent } from "./directives-structurelles/directives-structurelles.component";
 import { DirectivesDAttributComponent } from "./directives-d-attribut/directives-d-attribut.component";
 import { PipesComponent } from "./pipes/pipes.component";
+import { FormulairesAvecFormsModuleComponent } from "./formulaires-avec-forms-module/formulaires-avec-forms-module.component";
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, DemoBindingComponent, DirectivesStructurellesComponent, DirectivesDAttributComponent, PipesComponent],
+  imports: [RouterOutlet, DemoBindingComponent, DirectivesStructurellesComponent, DirectivesDAttributComponent, PipesComponent, FormulairesAvecFormsModuleComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
