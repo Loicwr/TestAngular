@@ -5,8 +5,16 @@ Imagine que tu as une valeur brute (comme une date ou un texte en minuscule), et
 
 <h2>Syntaxe de base : dans une double Accolade ( alt + parenthèse ouvrante ) : valeur | nomDuPipe</h2>
 
+---------------------------------------------------------------------
 
+<h2>1. Pipe intégrés à Angular</h2>
+<h4> uppercase et lowercase</h4>
 
+<p> angular devient avec uppercase {{ nom | uppercase }}</p>
+<p> ANGULAR devient avec lowercase {{ nom | lowercase }} </p>
 
+---------------------------------------------------------------------
 
-
+<p>Quel est la date (date) : {{ aujourdhui | date }}</p>
+<p>Quel est la date (shortDate) : {{ aujourdhui | date: 'shortDate' }}</p>
+<p>Quel est la date (fullDate): {{ aujourdhui | date: 'fullDate' }}</p>

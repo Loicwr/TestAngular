@@ -1,11 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-pipes',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './pipes.component.html',
   styleUrl: './pipes.component.scss'
 })
 export class PipesComponent {
-  nom = 'angular'
+  nom = 'angular';
+  aujourdhui = new Date();
 }
