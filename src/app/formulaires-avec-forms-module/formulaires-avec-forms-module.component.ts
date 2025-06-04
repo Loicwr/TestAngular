@@ -10,4 +10,9 @@ import { FormsModule } from '@angular/forms';
 })
 export class FormulairesAvecFormsModuleComponent {
   prenom = '';
+  onSubmit() {
+    console.log("Formulaire envoyé :", this.prenom);
+    
+  }
+
 }

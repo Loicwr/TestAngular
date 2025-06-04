@@ -17,3 +17,21 @@
 
 ---------------------------------------------------------------------
 
+<h2>3. Gérer l'envoi du formulaire avec (ngSubmit)</h2>
+<p>C'est l'événement qui s'active quand l'utilisateur clique sur "Envoyer". Il permet d'exécuter une méthode.</p>
+
+<form (ngSubmit)="onSubmit()">
+    <input [(ngModel)]="prenom" name="prenom" />
+    <button type="submit" >Envoyer</button>
+</form>
+
+<h4>Le name="..." est obligatoire pour que Angular suive le champ.</h4>
+
+---------------------------------------------------------------------
+
+<h2>4. Ajouter des validations de base</h2>
+<p>Pour empêcher l'envoi si les données ne sont pas valides (ex : vide, trop court…).</p>
+
+<input type="text" [(ngModel)]="prenom" name="prenom" required minlength="3" />
+
+<h4> Angular reconnaît les validations HTML (required, minlength, pattern, etc.) et agit automatiquement.</h4>
