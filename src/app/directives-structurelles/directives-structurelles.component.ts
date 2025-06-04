@@ -1,8 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-directives-structurelles',
-  imports: [],
+  imports: [CommonModule, ],
   templateUrl: './directives-structurelles.component.html',
   styleUrl: './directives-structurelles.component.scss'
 })
