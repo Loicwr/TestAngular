@@ -38,3 +38,7 @@ Imagine que tu as une valeur brute (comme une date ou un texte en minuscule), et
 ---------------------------------------------------------------------
 
 <h2>2. Enchaîner plusieurs pipes</h2>
+<h4>Tu peux chaîner plusieurs pipes à la suite pour effectuer plusieurs transformations.</h4>
+
+<p>uppercase + slice:0:2 transforme et coupe le texte. {{ prenom | uppercase | slice:0:2 }}</p>
+<p>date:'yyyy' extrait l'année,puis number transforme en nombre {{ dateNaissance | date:'yyyy' | number }}</p>

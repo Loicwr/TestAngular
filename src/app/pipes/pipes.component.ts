@@ -12,5 +12,6 @@ export class PipesComponent {
   aujourdhui = new Date();
   prix = 699.98;
   user = { nom: 'Alice', age: 25 };
-  
+  prenom = 'Loïc';
+  dateNaissance = new Date(1992, 19, 4);
 }
