@@ -8,13 +8,33 @@ Imagine que tu as une valeur brute (comme une date ou un texte en minuscule), et
 ---------------------------------------------------------------------
 
 <h2>1. Pipe intégrés à Angular</h2>
-<h4> uppercase et lowercase</h4>
+<h4> uppercase et lowercase : 	Met tout le texte en majuscule ou miniscule</h4>
 
 <p> angular devient avec uppercase {{ nom | uppercase }}</p>
 <p> ANGULAR devient avec lowercase {{ nom | lowercase }} </p>
 
 ---------------------------------------------------------------------
 
+<h4>Date : 	Transforme une date technique en format lisible</h4>
+
 <p>Quel est la date (date) : {{ aujourdhui | date }}</p>
 <p>Quel est la date (shortDate) : {{ aujourdhui | date: 'shortDate' }}</p>
 <p>Quel est la date (fullDate): {{ aujourdhui | date: 'fullDate' }}</p>
+
+---------------------------------------------------------------------
+
+<h4>Currency : Formate un nombre en prix ( avec symbole monétaire )</h4>
+
+<p>Currency de base {{ prix | currency }}
+<p>Currency afficher le symbole euro a la place du dollars {{ prix | currency: 'EUR' : 'symbol' }}</p>
+
+---------------------------------------------------------------------
+
+<h4>Json : Ce pipe convertit un objet en texte JSON lisible, avec les noms des propriétés</h4>
+
+<p>json affiche : </p>
+<pre>{{ user | json }}</pre>
+
+---------------------------------------------------------------------
+
+<h2>2. Enchaîner plusieurs pipes</h2>

@@ -10,4 +10,7 @@ import { Component } from '@angular/core';
 export class PipesComponent {
   nom = 'angular';
   aujourdhui = new Date();
+  prix = 699.98;
+  user = { nom: 'Alice', age: 25 };
+  
 }
