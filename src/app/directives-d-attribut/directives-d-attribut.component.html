@@ -34,4 +34,40 @@
 <p [ngClass]="{ 'active' : isActive, 'highlighted' : isHighlighted}">
     Élément avec classes multiples
 </p>
-<h4>Exemple 1 - Appliquer une dynamique</h4>
+
+<h5>Explication :</h5>
+<ul>
+    <li>Angular applique toutes les classes dont la valeur est true.</li>
+    <li>Ici, seule .active est appliquée, car isHighlighted vaut false.</li>
+</ul>
+
+
+<h4>Exemple 3 - Appliquer une classe via une variable</h4>
+
+<p [ngClass]="currentClass">
+    Classe choisie dynamiquement
+</p>
+
+<h5>Explication :</h5>
+<ul>
+    <li>Tu peux lier directement une chaîne à [ngClass].</li>
+    <li>Utile si tu changes la classe à partir d'une sélection ou d'un événement.</li>
+</ul>
+
+---------------------------------------------------------------------
+
+<h2>Bonus - [ngClass] + [ngStyle] ensemble</h2>
+
+<p  
+    [ngClass]="{ 'good' : score >= 10, 'bad' : score <= 10 }"
+    [ngStyle]="{ 'font-weight' : 'bold', 'font-size.px' : 18 }"
+>
+    score : {{ score }}
+</p>
+
+<h4>Explication, Tu combine les deux :</h4>
+<ul>
+    <li>[ngClass] change la couleur via les classes CSS.</li>
+    <li>[ngStyle] applique des styles précis directement, comme la taille ou le poids du texte.</li>
+</ul>
+

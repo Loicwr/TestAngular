@@ -17,4 +17,6 @@ export class DirectivesDAttributComponent {
   isImportant = true;
   isActive = true;
   isHighlighted = false;
+  currentClass = 'warning';
+  score = 8;
 }
