@@ -1,0 +1,37 @@
+<h1>Directives  d'attribut</h1>
+
+<h2>[ngStyle] - Style dynamiques</h2>
+<h4>Exemple 1 - Appliquer une dynamique</h4>
+
+<p [ngStyle]="{ 'color': isError ? 'red' : 'green'}">
+    Message d'erreur ou succès
+</p>
+
+<h5>Si " isError " = true, le texte est rouge / Sinon il est vert</h5>
+
+<h4>Exemple 2 - Appliquer plusieurs styles à la fois</h4>
+
+<p [ngStyle]="styleObject">
+    Texte stylé dynamiquement
+</p>
+
+<h5>Tu définis un objet JS avec les styles CSS que tu veux, et Angular les applique tous en même temps.</h5>
+
+---------------------------------------------------------------------
+
+<h2>[ngClass] - Appliquer des classes CSS selon des conditions</h2>
+<h4>Exemple 1 - Appliquer une classe ou une autre selon une condition</h4>
+
+<p [ngClass]="isImportant ? 'important' : 'normal'">
+    Texte avec une classe dynamique
+</p>
+
+<h5>Angular applique .important si isImportant est vrai, sinon .normal.</h5>
+
+
+<h4>Exemple 2 - Appliquer plusieurs classe en fonction de plusieurs conditions </h4>
+
+<p [ngClass]="{ 'active' : isActive, 'highlighted' : isHighlighted}">
+    Élément avec classes multiples
+</p>
+<h4>Exemple 1 - Appliquer une dynamique</h4>

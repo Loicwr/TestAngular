@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from "./header/header.component";
 import { DemoBindingComponent } from "./demo-binding/demo-binding.component";
 import { DirectivesStructurellesComponent } from "./directives-structurelles/directives-structurelles.component";
+import { DirectivesDAttributComponent } from "./directives-d-attribut/directives-d-attribut.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, DemoBindingComponent, DirectivesStructurellesComponent],
+  imports: [RouterOutlet, HeaderComponent, DemoBindingComponent, DirectivesStructurellesComponent, DirectivesDAttributComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
