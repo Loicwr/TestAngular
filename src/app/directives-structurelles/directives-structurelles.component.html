@@ -1,14 +1,15 @@
 <h1>Directive Structurelles</h1>
 
-<h2>*ngIf</h2>
+<h2>1. *ngIf</h2>
 <h4>Afficher un bloc HTML seulement si une condition est vraie.</h4>
 
 <p *ngIf="isLoggedIn">Bienvenue, vous êtes connecté !</p>
 
 <h5>Si " isLoggedIn " = false,  alors balise p ne s'affiche pas</h5>
 
+---------------------------------------------------------------------
 
-<h2>*ngIf ... else - Affichage conditionnel avec fallback</h2>
+<h2>2. *ngIf ... else - Affichage conditionnel avec fallback</h2>
 <h4>Afficher un contenu alternatif si la condition est fausse.</h4>
 
 <p *ngIf="isAdmin; else accessDenied">Bienvenu Admin</p>
@@ -18,4 +19,49 @@
 
 <h5>Si " isAdmin " = false,  il affiche le contenu de ng-template</h5>
 
-<h2></h2>
+---------------------------------------------------------------------
+
+<h2>3. *ngFor - Répéter un bloc pour chaque élément d'une liste</h2>
+<h4>Créer dynamiquement des éléments HTML à partir d'un tableau.</h4>
+
+<ul>
+    <li *ngFor="let animal of animaux">{{  animal }}</li>
+</ul>
+
+<h5>Affiche une liste avec chaque animal.</h5>
+
+<h4>Syntaxe détaillé</h4>
+<p> *ngFor =" let item of items; let i  = index "</p>
+<p> let item  :  Crée une variable pour chaque élément</p>
+<p> of  item  :  Tableau à parcourir</p>
+<p> let i = index  :  Donne l'index(0, 1, 2, ...) de l'élément</p>
+
+<div *ngFor="let fruit of fruits; let i = index">
+    {{ i + 1 }}. {{ fruit }}
+</div>
+
+---------------------------------------------------------------------
+
+<h2>4. *ngIf avec un bouton toggle (interactivité)</h2>
+
+<button (click)="isVisible = !isVisible">Afficher ou Cacher</button>
+<p *ngIf="isVisible">Ce texte peut apparaître ou disparaître</p>
+
+<h5>L'utilisateur peut masquer ou afficher dynamiquement un bloc</h5>
+
+---------------------------------------------------------------------
+
+<h2>5. Combiner *ngIf et ngClass</h2>
+
+<p *ngIf="score > 10" [ngClass]="'text-success'">
+    Bon score !
+</p>
+
+---------------------------------------------------------------------
+
+<h2>Conseil pratiques</h2>
+<ul>
+    <li>Toujours déclarer tes variables dans le fichier .ts du composant.</li>
+    <li>Les ng-template ne s'affichent jamais seuls : ils servent uniquement avec des else.</li>
+    <li>Pour le style dynamique, combine *ngIf avec [ngClass], [style] ou [hidden] si besoin.</li>
+</ul>

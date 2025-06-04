@@ -10,5 +10,8 @@ import { Component } from '@angular/core';
 export class DirectivesStructurellesComponent {
   isLoggedIn = true;
   isAdmin = false;
-
+  animaux = ['Chat', 'Chien', 'Emerick', 'Lapin', 'Ours'];
+  fruits = ['Pomme', 'Cerise', 'Abricot', 'Axel', 'Banane'];
+  isVisible = false;
+  score = 11;
 }
