@@ -33,8 +33,8 @@
     <li><code>&#64;NgModule ({{ '{' }})</code></li>
     <li><code>imports: [RouterModule.forRoot(routes)]</code></li>
     <li><code>exports: [RouterModule]</code></li>
-    <li><code>{{ '}' }})</code></li>
-    <li><code>export class AppRoutingModule {{ '{' }}&#125;</code></li>
+    <li><code>&#123; &#125;&#41;</code></li>
+    <li><code>export class AppRoutingModule {{ '{' }}{{ '}' }}</code></li>
 </ul>
 
 <h2>2. Définir les routes de base</h2>
@@ -92,3 +92,46 @@
     <li><code>&lt;a [routerLink]="['/dashboard']"&gt;dashboard&lt;/a&gt;</code></li>
 </ul>
 
+<h2>5. Ajouter une route avec paramètre :id</h2>
+<p>Permet d'avoir des routes dynamiques( ex:/produit/42 )</p>
+
+<p>Déclaration dans app-routing.module.ts :</p>
+<ul>
+    <li><code>const routes: Routes = [</code></li>
+    <li><code>{{ '{' }} path: 'produit/:id', component: ProduitDetailComponent {{ '}' }}</code></li>
+    <li><code>{{ ']' }};</code></li>
+</ul>
+
+<p>À noter :</p>
+<ul>
+    <li><code>:id</code> : est un paramètre de route.</li>
+    <li>Tu peux en définir plusieurs exemple :</li>
+    <li><code>{{ '{' }} path: 'user/:userId/post/:postId', component: PostComponent {{ '}' }}</code></li>
+</ul>
+
+<h2>6. Récupérer un paramètre avec ActivateRoute</h2>
+<p>Utilie pour récupérer un id ou autre dans le composant concerné.</p>
+
+<p>1. Injecte le service ActivateRoute dans le constructeur :</p>
+<ul>
+    <li><code>import {{ '{' }} ActivatedRoute {{ '}' }} from '&#64;angular/router'</code></li>
+    <li><code>constructor(private route: ActivatedRoute){{ '{' }}{{ '}' }}</code></li>
+</ul>
+
+<p>2. Récupère le paramètre</p>
+<ul>
+    <li><code>ngOnInit() {{ '{' }}</code></li>
+    <li><code>const id = this.route.snapshot.paramMap.get('id');</code></li>
+    <li><code>console.log('ID produit:', id);</code></li>
+    <li><code>{{ '}' }}</code></li>
+</ul>
+
+<p>3. Pour écouter les changements ( ex: route changeante ) :</p>
+<ul>
+    <li><code>ngOnInit() {{ '{' }}</code></li>
+    <li><code>this.route.paramMap.subscribe( params =&gt; {{ '{' }} </code></li>
+    <li><code>const id = params.get('id');</code></li>
+    <li><code>console.log('ID mis à jour:', id);</code></li>
+    <li><code>{{ '}' }});</code></li>
+    <li><code>{{ '}' }}</code></li>
+</ul>
