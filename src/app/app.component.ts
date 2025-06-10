@@ -7,11 +7,12 @@ import { PipesComponent } from "./pipes/pipes.component";
 import { FormulairesAvecFormsModuleComponent } from "./formulaires-avec-forms-module/formulaires-avec-forms-module.component";
 import { ModuleAngularComponent } from "./module-angular/module-angular.component";
 import { RoutingNavigationComponent } from "./routing-navigation/routing-navigation.component";
+import { CreerUtiliserServiceComponent } from "./creer-utiliser-service/creer-utiliser-service.component";
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, DemoBindingComponent, DirectivesStructurellesComponent, DirectivesDAttributComponent, PipesComponent, FormulairesAvecFormsModuleComponent, ModuleAngularComponent, RoutingNavigationComponent],
+  imports: [RouterOutlet, DemoBindingComponent, DirectivesStructurellesComponent, DirectivesDAttributComponent, PipesComponent, FormulairesAvecFormsModuleComponent, ModuleAngularComponent, RoutingNavigationComponent, CreerUtiliserServiceComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
