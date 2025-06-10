@@ -55,3 +55,19 @@
     <li>** : capture toutes les URL non prévues(404)</li>
 </ul>
 
+<h2>3. Ajouter <code>&lt;router-outlet&gt;</code> dans app.component.html</h2>
+<p>C'est ici que s'affiche dynamiquelent les composabts liés aux routes.</p>
+
+<ul>
+    <li><code>dans app.component.html</code></li>
+    <li><code>&lt;app-navbar&gt;&lt;/app-navbar&gt;</code></li>
+    <li><code>&lt;router-outlet&gt;&lt;/router-outlet&gt;</code></li>
+    <li><code>&lt;app-footer&gt;&lt;/app-footer&gt;</code></li>
+</ul>
+
+<h4>explication :</h4>
+<ul>
+    <li><code>Le &lt;router-outlet&gt; agit comme un point d'injection.</code></li>
+    <li>Angular y charge automatiquement le composant correspondant à la active</li>
+    <li>Tu peux aussi en avoir plusieurs pour les routes enfants(routing imbriqué)</li>
+</ul>
