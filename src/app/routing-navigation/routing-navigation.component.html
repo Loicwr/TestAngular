@@ -40,6 +40,7 @@
 <h2>2. Définir les routes de base</h2>
 <p>Associe des url spécifique à des composants.</p>
 
+<p>Exemple courant :</p>
 <ul>
     <li><code>const routes: Routes = [</code></li>
     <li><code>{{ '{' }} path: 'dashboard', component: DashboardComponent {{ '}' }},</code> //route simple</li>
@@ -48,7 +49,7 @@
     <li><code>];</code></li>
 </ul>
 
-<h4>À retenir :</h4>
+<p>À retenir :</p>
 <ul>
     <li>path: '' :redirige l'accès à la racine du site.</li>
     <li>pathMatch: 'full' : signife que l'URL doit être strictement vide ('')</li>
@@ -58,6 +59,7 @@
 <h2>3. Ajouter <code>&lt;router-outlet&gt;</code> dans app.component.html</h2>
 <p>C'est ici que s'affiche dynamiquelent les composabts liés aux routes.</p>
 
+<p>Code :</p>
 <ul>
     <li><code>dans app.component.html</code></li>
     <li><code>&lt;app-navbar&gt;&lt;/app-navbar&gt;</code></li>
@@ -71,3 +73,22 @@
     <li>Angular y charge automatiquement le composant correspondant à la active</li>
     <li>Tu peux aussi en avoir plusieurs pour les routes enfants(routing imbriqué)</li>
 </ul>
+
+<h2>4. Naviguer avec [routerlink]</h2>
+<p>Crée des liens vers des routes sans recharger la page.</p>
+
+<p>Exemples :</p>
+<ul>
+    <li>Lien statiques :</li>
+    <li><code>&lt;a [routerLink]="['/dashboard']"&gt;dashboard&lt;/a&gt;</code></li>
+    <li>Liens dynamiques avec paramètres :</li>
+    <li><code>&lt;a [routerLink]="['/produit', 42]"&gt;Voir produit 42&lt;/a&gt;</code></li>
+</ul>
+
+<p>Bonnes pratiques :</p>
+<ul>
+    <li>Toujours utiliser [routerLink] plutôt que href pour la navigation interne.</li>
+    <li>[routerLinkActive]="['active']" peut ajouter une classe CSS active :</li>
+    <li><code>&lt;a [routerLink]="['/dashboard']"&gt;dashboard&lt;/a&gt;</code></li>
+</ul>
+
