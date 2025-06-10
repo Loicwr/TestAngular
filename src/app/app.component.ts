@@ -6,11 +6,12 @@ import { DirectivesDAttributComponent } from "./directives-d-attribut/directives
 import { PipesComponent } from "./pipes/pipes.component";
 import { FormulairesAvecFormsModuleComponent } from "./formulaires-avec-forms-module/formulaires-avec-forms-module.component";
 import { ModuleAngularComponent } from "./module-angular/module-angular.component";
+import { RoutingNavigationComponent } from "./routing-navigation/routing-navigation.component";
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, DemoBindingComponent, DirectivesStructurellesComponent, DirectivesDAttributComponent, PipesComponent, FormulairesAvecFormsModuleComponent, ModuleAngularComponent],
+  imports: [RouterOutlet, DemoBindingComponent, DirectivesStructurellesComponent, DirectivesDAttributComponent, PipesComponent, FormulairesAvecFormsModuleComponent, ModuleAngularComponent, RoutingNavigationComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

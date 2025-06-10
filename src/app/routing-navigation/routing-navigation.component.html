@@ -1,1 +1,39 @@
-<p>routing-navigation works!</p>
+<h1>Angular Routing & Navigation - Cheatsheet (v20)</h1>
+<p>C'est un module Angular dédié à la configuration du système de routes. Il déclare quelles URL affichent quels composants, 
+    et permet à Angular de gérer la navigation entre les pages sans recharger toute l'application (Single Page Application).</p>
+
+<h2>1. Créer et configurer app-routing.module.ts</h2>
+<p>Crée le module avec CLI<br>
+    ng generate module app-routing --flat --module=app
+</p>
+
+<ul>
+    <li> --flat : place le fichier à la racine.</li>
+    <li> --module=app : l'importe automatiquement dans Appmodule.</li>
+</ul>
+
+<h4>Dans app-routing.module.ts, on importe les éléments nécessaires :</h4>
+
+<ul>
+    <li>import NgModule from '(arobase)angular/core'</li>
+    <li>import RouterModule, Routes from '(arobase)angular/router'</li>
+</ul>
+
+<h4>Déclare un tableau de routes :</h4>
+<ul>
+    <li><code> const routes: Routes = [</code></li>
+    <li><code>{{ '{' }} path: 'home', component: HomeComponent {{ '}' }}</code></li>
+    <li><code>{{ '{' }} path: '', redirectTo: '/home', pathMatch: 'full' {{ '}' }}</code></li>
+    <li><code>{{ '{' }} path: '**', component: NotFoundComponent {{ '}' }}</code></li>
+    <li><code>{{ ']' }};</code></li>
+</ul>
+
+<h4>Configure RouterModule :</h4>
+<ul>
+    <li><code>&#64;NgModule ({{ '{' }})</code></li>
+    <li><code>imports: [RouterModule.forRoot(routes)]</code></li>
+    <li><code>exports: [RouterModule]</code></li>
+    <li><code>{{ '}' }})</code></li>
+    <li><code>export class AppRoutingModule {{ '{' }}&#125;</code></li>
+</ul>
+
