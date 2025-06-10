@@ -28,6 +28,15 @@
     <li><code>{{ ']' }};</code></li>
 </ul>
 
+<p>Chaque objet du tableau routes contient :</p>
+<ul>
+    <li>path : le chemin de l'URL (ex:/home)</li>
+    <li>component: le composant à afficher</li>
+    <li>redirectTo: redirige l'utilisateur vers une autre route</li>
+    <li>pathMatch: 'full': exige une correspondance exacte du chemin</li>
+    <li>**: wildcard ( route catch-all pour le erreurs 404 )</li>
+</ul>
+
 <h4>Configure RouterModule :</h4>
 <ul>
     <li><code>&#64;NgModule ({{ '{' }})</code></li>
