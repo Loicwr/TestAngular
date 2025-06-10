@@ -37,3 +37,21 @@
     <li><code>export class AppRoutingModule {{ '{' }}&#125;</code></li>
 </ul>
 
+<h2>2. Définir les routes de base</h2>
+<p>Associe des url spécifique à des composants.</p>
+
+<ul>
+    <li><code>const routes: Routes = [</code></li>
+    <li><code>{{ '{' }} path: 'dashboard', component: DashboardComponent {{ '}' }},</code> //route simple</li>
+    <li><code>{{ '{' }} path: '', redirectTo: '/dashboard', pathMatch: 'full' {{ '}' }},</code> // route par défaut</li>
+    <li><code>{{ '{' }} path: '**', component: NotFoundComponent {{ '}' }}</code> //route de fallback</li>
+    <li><code>];</code></li>
+</ul>
+
+<h4>À retenir :</h4>
+<ul>
+    <li>path: '' :redirige l'accès à la racine du site.</li>
+    <li>pathMatch: 'full' : signife que l'URL doit être strictement vide ('')</li>
+    <li>** : capture toutes les URL non prévues(404)</li>
+</ul>
+
